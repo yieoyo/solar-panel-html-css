@@ -1,1 +1,1 @@
-# solar-panel-html-css
+# solar-system-html-css
