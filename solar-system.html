@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #001c33; /* Dark blue background */
+}
+
+.sun {
+  width: 10px;
+  height: 10px;
+  background-color: #ffb366; /* Light orange */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  box-shadow: 0 0 5px 2px rgba(255, 195, 102, 0.7); /* Lighter orange glow */
+  animation: glow 2s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-text {
+  color: white; /* Dark blue text */
+  font-size: 8px;
+}
+
+.planet {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.planet-name {
+  font-size: 8px;
+  margin-top: 5px;
+  color: white;
+}
+
+.mercury {
+  background-color: #c0c0c0; /* Silver */
+  animation: orbitMercury 4s linear infinite, glow 4s linear infinite;
+}
+
+.venus {
+  background-color: #ffcc66; /* Yellow-orange */
+  animation: orbitVenus 8s linear infinite, glow 8s linear infinite;
+}
+
+.earth {
+  background-color: #3399ff; /* Blue */
+  animation: orbitEarth 12s linear infinite, glow 12s linear infinite;
+}
+
+.earth .moon {
+  background-color: #e0e0e0; /* Light gray */
+  width: 3px;
+  height: 3px;
+  margin-top: 10px;
+  animation: orbitMoon 3s linear infinite;
+}
+
+.mars {
+  background-color: #ff6666; /* Red */
+  animation: orbitMars 16s linear infinite, glow 16s linear infinite;
+}
+
+.jupiter {
+  background-color: #ff9900; /* Orange */
+  animation: orbitJupiter 24s linear infinite, glow 24s linear infinite;
+}
+
+.saturn {
+  background-color: #ffd700; /* Gold */
+  animation: orbitSaturn 32s linear infinite, glow 32s linear infinite;
+}
+
+.uranus {
+  background-color: #66ccff; /* Light blue */
+  animation: orbitUranus 40s linear infinite, glow 40s linear infinite;
+}
+
+.neptune {
+  background-color: #6666ff; /* Dark blue */
+  animation: orbitNeptune 48s linear infinite, glow 48s linear infinite;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px 2px rgba(255, 195, 102, 0.7); }
+  50% { box-shadow: 0 0 8px 4px rgba(255, 195, 102, 0.9); }
+  100% { box-shadow: 0 0 5px 2px rgba(255, 195, 102, 0.7); }
+}
+
+    @keyframes orbitMercury {
+      from { transform: rotate(0deg) translateX(15px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(15px) rotate(-360deg); }
+    }
+
+    @keyframes orbitVenus {
+      from { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+    }
+
+    @keyframes orbitEarth {
+      from { transform: rotate(0deg) translateX(45px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(45px) rotate(-360deg); }
+    }
+
+    @keyframes orbitMoon {
+      from { transform: rotate(0deg) translateX(11px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(11px) rotate(-360deg); }
+    }
+
+    @keyframes orbitMars {
+      from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+    }
+
+    @keyframes orbitJupiter {
+      from { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+    }
+
+    @keyframes orbitSaturn {
+      from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    }
+
+    @keyframes orbitUranus {
+      from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    @keyframes orbitNeptune {
+      from { transform: rotate(0deg) translateX(180px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(180px) rotate(-360deg); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="sun">
+    <div class="sun-text">Sun</div>
+  </div>
+  <div class="planet mercury">
+    <div class="planet-name">Mercury</div>
+  </div>
+  <div class="planet venus">
+    <div class="planet-name">Venus</div>
+  </div>
+  <div class="planet earth">
+    <div class="planet-name">Earth</div>
+    <div class="planet moon">
+      <div class="planet-name">Moon</div>
+    </div>
+  </div>
+  <div class="planet mars">
+    <div class="planet-name">Mars</div>
+  </div>
+  <div class="planet jupiter">
+    <div class="planet-name">Jupiter</div>
+  </div>
+  <div class="planet saturn">
+    <div class="planet-name">Saturn</div>
+  </div>
+  <div class="planet uranus">
+    <div class="planet-name">Uranus</div>
+  </div>
+  <div class="planet neptune">
+    <div class="planet-name">Neptune</div>
+  </div>
+</body>
+</html>
